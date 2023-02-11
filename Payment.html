@@ -1,0 +1,78 @@
+<html>
+ 
+ 
+<script>
+function func()
+{
+var p=document.myForm.pay_id.value;
+var fn=document.myForm.first_name.value;
+var d=document.myForm.p_date.value;
+var pm=document.myForm.p_mode.value;
+var pa=document.myForm.p_amt.value;
+
+if(p=="")
+        {
+                alert(" ID  can not be blank");
+                return false;
+        }
+        if(fn=="")
+                        {
+                                alert(" name can not be blank");
+                                                return false;
+                                        }
+        if(d=="")
+                        {
+                                                alert(" Please enter Date");
+                                                return false;
+                                        }
+        if(pm=="")
+                        {
+                                                alert(" Please select a proper mode");
+  return false;
+                                        }
+        if(pa=="")
+                        {
+                                                alert(" Please enter the amount");
+                                                return false;
+                                        }
+     
+
+
+}
+        </script>
+
+
+
+<form name="myForm" method="get" onsubmit="func()" action="payment.php"  >	
+
+<header><h1>PAYMENT FORM</h1></header>
+
+<body>
+   <div style="background-image: url('payment.jpeg');">
+<br>
+
+
+
+<label>Enter name</label>
+<input type="text" name="first_name" pattern="[a-zA-Z].{1,}"><br><br>
+
+<label>Enter Payment date:</label>
+<br>
+ <input type="date" name="p_date" ><br><br>
+
+ <label for="payment">Choose  Payment mode:</label><br>
+<select id="payment" name="p_mode">
+  <option value="credit">Credit</option>
+  <option value="debit">Debit</option>
+  <option value="gpay">Gpay</option>
+  <option value="upi">Upi</option>
+</select><br><br>
+<label>Amount</label><br>
+<input type="num" name="p_amt"><br><br>
+<hr>
+
+<input type="submit" value="submit"><br><br>
+	
+</form>
+</body>
+</html>

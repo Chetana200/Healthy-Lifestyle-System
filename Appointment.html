@@ -1,0 +1,74 @@
+<html>
+
+
+        <script>
+                function func()
+{
+        var a=document.myform.appid.value;
+        var d=document.myform.date.value;
+        var b=document.myform.bmivalue.value;
+        var bt=document.myform.bmitype.value;
+        var did=document.myform.doc_id.value;
+        var f=document.myform.first_name.value;
+        if(a=="")
+        {
+                alert(" ID can not be blank");
+                return false;
+        }
+        if(d=="")
+                        {
+                            alert(" Date can not be blank");
+                                                return false;
+                                       }
+if(b=="")
+                {
+                                  alert(" value can not be blank");
+                                        return false;
+                                }
+        if(bt=="")
+                        {
+                           alert("Enter bmi type");
+                                                return false;
+ }
+        if(did=="")
+                        {
+                                           alert(" ID can not be blank");
+                                                return false;
+                                        }
+if(f=="")
+                {
+                                        alert(" Name can not be blank");
+                                        return false;
+                                }
+
+}
+        </script>
+
+        <header><h1> <center>BOOKING OF APPOINTMENT </h1></header></center>
+
+<body style="background-image:url(appoint.jpeg);">
+                <body style="background-color:pink;">
+
+                                <hr>
+                                <form name="myform" method="get" onsubmit="func()" action="appointment.php">
+                              <center>                                  
+
+                            <b>Date: </b>
+                             <input type="date" id="date" name="date"><br>
+
+                             
+
+
+                             <br><b>Enter Bmi value</b>
+                             <input type="text" name="bmivalue"><br>
+
+                                 <br><b>Enter Bmi type</b>
+                             <input type="text" name="bmitype" pattern="[a-zA-Z].{1,}"><br>
+                           
+                            <br><b>Enter your First Name </b>
+                             <input type="text" name="first_name" pattern="[a-zA-Z].{1,}"><br></center>
+
+        
+      <center>   <input type="submit" name="submit" value="submit"><br><br></h3></center>
+</form></body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+        <head>
+<script type="text/javascript">
+            function validate() {
+                var fname = document.forms["myForm"]["first_name"];
+                var mname = document.forms["myForm"]["middle_name"];
+                var lname = document.forms["myForm"]["last_name"];
+                var gender = document.forms["myForm"]["gender"];
+                var city = document.forms["myForm"]["city"];
+                var phone = document.forms["myForm"]["phone"];
+                var history = document.forms["myForm"]["history"];
+                var password =document.forms["myForm"]["password"];  
+                
+                if (fname.value == "") {
+                    window.alert("Please enter your  first name.");
+                    fname.focus();
+                    return false;
+                }
+               if (mname.value == "") {
+                    window.alert("Please enter your  middle name.");
+                    mname.focus();
+                    return false;
+                }
+          if (lname.value == "") {
+                    window.alert("Please enter your  last name.");
+                    lname.focus();
+                    return false;
+                }
+                if (gender.value == "") {
+                    window.alert("Please enter your gender.");
+                    gender.focus();
+                    return false;
+                }
+  
+                if (city.value == "") {
+                    window.alert("Please enter your city.");
+                    city.focus();
+                    return false;
+                }
+                     
+  
+                 if (phone.value == "") {
+                    window.alert("Please enter your phone number.");
+                    phone.focus();
+                    return false;
+                    }
+                    
+                    
+                if (history.value == "") {
+                    window.alert("Please enter your history.");
+                    history.focus();
+                    return false;
+                }
+  
+                if (password.value == "") {
+                    window.alert("Please enter your password");
+                    password.focus();
+                    return false;
+                }
+  
+                
+                
+  
+                return true;
+            }
+        </script>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+          font-family: Calibri, Helvetica, sans-serif;
+            background-color: pink;
+}
+.container {
+            padding: 50px;
+              background-color: lightblue;
+}
+
+input[type=text], input[type=password], textarea {
+          width: 100%;
+            padding: 15px;
+              margin: 5px 0 22px 0;
+                display: inline-block;
+                  border: none;
+                    background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+          background-color: orange;
+            outline: none;
+}
+ div {
+                     padding: 10px 0;
+                              }
+ hr {
+           border: 1px solid #f1f1f1;
+             margin-bottom: 25px;
+ }
+ .registerbtn {
+           background-color:green;
+             color: white;
+               padding: 16px 20px;
+                 margin: 8px 0;
+                   border: none;
+                     cursor: pointer;
+                       width: 100%;
+                         opacity: 0.9;
+ }
+ .registerbtn:hover {
+           opacity: 1;
+ }
+</style>
+        </head>
+        <body>
+                <form name="myForm"       action="registration.php" onsubmit="return validate()"  method="GET">
+                          <div class="container">
+                                    <center>  <h1> Patient Registration Form</h1> </center>
+                                      <hr>
+                                        <label> Firstname </label>
+                                        <input type="text" name="first_name" placeholder= "Firstname">
+                                        <label> Middlename: </label>
+                                        <input type="text" name="middle_name" placeholder="Middlename">
+                                        <label> Lastname: </label>
+                                        <input type="text" name="last_name" placeholder="Lastname">
+
+
+
+                                         <br><label for="bithdate">Date of Birth:</label><br>
+                                                               <input type="date" id="date" name="bdate"><br>
+                                                               <div>
+                                                                       <label>
+                                                                               Gender :
+                                                                       </label><br>
+                                                                       <input type="radio" value="Male" name="gender" checked > Male
+                                                                       <input type="radio" value="Female" name="gender"> Female
+                                                                       <input type="radio" value="Other" name="gender"> Other<br>
+
+                                                                       <br> <label>city:
+                                                                                  <input type=text name="city"><br>
+                                                               </div>
+                                                                       <label>
+                                                                               contact no :
+                                                                       </label>
+                                                                     
+                                                                                            <input type="text" name="phone"><br>
+
+                                                              
+                                                                         
+                                                                                                        
+                                                                                                <div>
+                <label> Medical history</label><br>
+                         <input type="text" name="history"><br>
+
+                     
+
+                      <label>Password</label>
+                        <input type="text" name="password"><br>
+
+                          <input type="submit" value="submit">Register</button>
+                </form>
+        </body>
+</html>
+
+
+
+<html>
+        <head>
+<script type="text/javascript">
+            function validate() {
+                var user= document.forms["myForm"]["username"];
+                var pass = document.forms["myForm"]["password"];
+                
+                    if (user.value == "") {
+                    window.alert("Please enter your  user name.");
+                    user.focus();
+                    return false;
+                }
+                if (pass.value == "") {
+                    window.alert("Please enter your  password.");
+                    pass.focus();
+                    }
+                   else (pass.length < 8 || pass.length > 8)
+		{
+			window.alert("Password min and max length is 8.");
+		}
+        return false;
+                
+                return true;
+                }
+			
+
+ </script>
+<title> Login Page </title>  
+<style>   
+Body {  
+  font-family: Calibri;  
+  background-color: pink; 
+  text-align:center;
+  align:center; 
+}  
+button {   
+       background-color: blue;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+      }   
+ form {   
+        border: 3px solid ;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }   
+</style>   
+</head>    
+<body>    
+    <center> <h1> WELCOME TO HEALTHY LIFESTYLE SYSTEM </h1> </center> 
+      <form name="myForm"action="login.php" method="get" onsubmit="return validate()">
+        
+            <label>Username : </label>   
+   <input type="text" placeholder="Enter Username" name="username">  
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password">  
+            <center><input type ="submit" name="log" id="log"value="Log In Here"></center>   
+<br>
+            
+        <b> If you are new patient <b style="color:red"><a href="Registration.html">Register here</a></b><br> 
+        </div>   
+    </form> 
+</div>
+           
+</body>     
+</html>  
+
+
+
+
+
+<html>
+<script type="text/javascript">
+            function validate() {
+                   var fid = document.forms["myForm"]["f_id"];
+                   var name = document.forms["myForm"]["first_name"];
+                   var type = document.forms["myForm"]["f_type"];
+                   var weight = document.forms["myForm"]["w_lost"];
+                   var name = document.forms["myForm"]["first_name"];
+                   var dur= document.forms["myForm"]["duration"];
+                   var diet = document.forms["myForm"]["change_diet"];
+                   var did= document.forms["myForm"]["doc_id"];
+                   
+                   if (fid.value == "") {
+                    window.alert("Please enter your  feedback id.");
+                    fid.focus();
+                    return false;
+                }
+                if (name.value == "") {
+                    window.alert("Please enter your  first name.");
+                    name.focus();
+                    return false;
+                }
+                if (dur.value == "") {
+                    window.alert("Please enter duration of your diet");
+                    dur.focus();
+                    return false;
+                }
+                if (diet.value == "") {
+                    window.alert("Please enter if you want to change your diet.");
+                    diet.focus();
+                    return false;
+                }
+                if (did.value == "") {
+                    window.alert("Please enter your doctor id.");
+                    did.focus();
+                    return false;
+                }
+                 return true;
+            }
+        </script>
+                
+        <form  name="myForm"  action="feedback.php" onsubmit="return validate()"  method="get">
+        <header><h1>FEEDBACK FORM</h1></header>
+        <body style="background-color:pink;">
+<hr>
+
+                        <h3><label>Feedback id</label></h3>
+                        <input type="text" name="f_id"><br><br>
+
+                        <h3><label>Enter name</label></h3>
+                        <input type="text" name="first_name"><br><br>
+
+                        <h3><label>Feedback Type:</label></h3>
+                        <input type="text" name="f_type"><br><br>
+
+                        <h3><label>Weight loss</label></h3>
+                        <input type="text" name="w_lost"><br><br>
+
+                        <h3><label>Duration</label></h3>
+                          <input type="text" name="duration">
+                          <br><br>
+                          <h3><label>Change Diet</label></h3>
+
+                          <input type="text"  name="change_diet"><br><br>
+
+                          <h3><label>Doctor id</label></h3>
+                                <input type="text" name="doc_id"><br><br>
+                                <hr>
+
+                                <input type="submit" value="submit"><br><br>
+
+        </form>
+                </body>
+</html>
+
+

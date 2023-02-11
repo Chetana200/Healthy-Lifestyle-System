@@ -1,0 +1,86 @@
+<html>
+	
+<br>
+
+        <script>
+                function validate()
+{
+        var f=document.myForm.f_id.value;
+        var n=document.myForm.first_name.value;
+        var ft=document.myForm.f_type.value;
+        var w=document.myForm.w_lost.value;
+        var d=document.myForm.duration.value;
+        var cd=document.myForm.change_diet.value;
+        var did=document.myForm.doc_id.value;
+
+        if(f=="")
+        {
+                alert(" ID  can not be blank");
+                return false;
+        }
+        if(n=="")
+                        {
+                                alert(" name can not be blank");
+                                                return false;
+                                        }
+        if(ft=="")
+                        {
+                                                alert(" Please enter feedback type");
+                                                return false;
+                                        }
+        if(w=="")
+                        {
+                                                alert(" It  can not be blank");
+  return false;
+                                        }
+        if(d=="")
+                        {
+                                                alert(" Duration  can not be blank");
+                                                return false;
+                                        }
+        if(cd=="")
+                        {
+                                                alert(" Please enter this field");
+                                                return false;
+                                        }
+        if(did=="")
+                        {
+                                                alert("Doctor ID  can not be blank");
+                                                return false;
+                                        }
+
+
+}
+        </script>
+
+<form  name="myForm"  action="feedback.php" onsubmit="validate()"  method="get">
+ <header><h1>FEEDBACK FORM</h1></header>
+        <body>
+<div style="background-image: url('Feedback.jpeg');">
+
+<hr>
+
+                        
+                        <h3><label>Enter name</label></h3>
+                        <input type="text" name="first_name" pattern="[a-zA-Z].{1,}"><br><br>
+
+                        <h3><label>Feedback Type:</label></h3>
+                        <input type="text" name="f_type" pattern="[a-zA-Z].{1,}"><br><br>
+
+                        <h3><label>Weight loss</label></h3>
+                        <input type="text" name="w_lost" ><br><br>
+
+                        <h3><label>Duration</label></h3>
+                          <input type="text" name="duration">
+                          <br><br>
+                          <h3><label>Change Diet</label></h3>
+
+                          <input type="text"  name="change_diet" pattern="[a-zA-Z].{1,}"><br><br>
+
+                          
+
+                                <input type="submit" value="submit"><br><br>
+
+        </form>
+                </body>
+</html>

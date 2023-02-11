@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>BMI Calculation</title>
+<script>
+                function func()
+{
+        var m=document.myform.mass.value;
+        var w=document.myform.height.value;
+        
+        if(m=="")
+        {
+                alert("Mass can not be blank");
+                return false;
+        }
+        if(w=="")
+                        {
+                            alert("Height can not be blank");
+                                                return false;
+                                       }
+}
+</script>
+<style>
+body {  
+  margin:50px 0px;
+  padding:0px;
+  font-family: Calibri;  
+  background-color: pink; 
+  text-align:center;
+  align:center; 
+}  
+</style>
+</head>
+
+<body style="background-image:url(bmi1.jpeg
+);">
+<center><h1>BMI Calculation </h1></center>
+<img align="bottom" src="bmi.jpeg" width="400" height="250" >  
+      
+	<div>
+		<p id="intro"><h2><b>Calculate your BMI (body mass index) by using the form below. Enter your weight and height and click the Calculate button to display your BMI result.</p></b></h2>
+		<form name="myform" action="bmi1.php" method="get" onsubmit="func()">
+			<fieldset>
+			<center><legend><h2><b> Height and Weight</h2></b></legend></center>
+<h2><b>Mass in kilogram (kg):
+  <input type="text" name="mass" >
+  <br> 
+
+  Height in meter (m):
+  <input type="text" name="height" >
+  <br>
+<h3><input type="submit" name="submit"  value="submit"></h3>	</h2></b>		
+			
+		
+	</div>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+                <head>
+
+
+
+        <script>
+                function validate()
+{
+        var f=document.myForm.first_name.value;
+        var m=document.myForm.middle_name.value;
+        var l=document.myForm.last_name.value;
+        var g=document.myForm.gender.value;
+        var c=document.myForm.city.value;
+        var p=document.myForm.phone.value;
+        var h=document.myForm.history.value;
+        var ps=document.myForm.password.value;
+        var cc=/^\d{10}$/;
+        if(f=="")
+        {
+                alert("  First Name can not be blank");
+                return false;
+        }
+        if(m=="")
+                        {
+                        alert("Middle Name can not be blank");
+                                                return false;
+                                        }
+
+        if(l=="")
+     {
+                   alert("Last  Name can not be blank");
+                                        return false;
+                                }
+if(g=="")
+                        {
+                        alert("  Please  enter gender");
+                                                return false;
+                                        }
+         if(c=="")
+                                        {
+                                                                        alert("  Please  enter city");
+                                                                                                return false;
+                                                                                        }
+
+        if(!p.match(cc))
+                        {
+                                alert("Phone number cannot be more than 10 digit ");
+                                                return false;
+                                        }
+        if(h=="")
+                        {
+                                alert("  History can not be blank");
+                                                return false;
+                                        }
+        else if(ps.length<6)
+        {
+                alert("Password length can not be less than 6 character");
+                return false;
+        }
+}
+        </script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+                  font-family: Calibri, Helvetica, sans-serif;
+                              background-color: pink;
+}
+.container {
+                    padding: 50px;
+                                  background-color: lightblue;
+}
+
+input[type=text], input[type=password], textarea {
+                  width: 100%;
+                              padding: 15px;
+                                            margin: 5px 0 22px 0;
+                                                            display: inline-block;
+                                                                              border: none;
+                                                                                                  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+                  background-color: orange;
+                              outline: none;
+}
+ div {
+                              padding: 10px 0;
+                                                            }
+  hr {
+                     border: 1px solid #f1f1f1;
+                                  margin-bottom: 25px;
+                                   }
+   .registerbtn {
+                      background-color:green;
+color: white;
+                                                  padding: 16px 20px;
+                                                                   margin: 8px 0;
+                                                                                      border: none;
+                                                                                                           cursor: pointer;
+                                                                                                                                  width: 100%;
+
+    opacity: 0.9;
+
+     }
+    .registerbtn:hover {
+                       opacity: 1;
+                        }
+</style>
+        </head>
+                <body>
+                 <form name="myForm"       action="registration.php" onsubmit="return validate()"  method="GET">
+                                                                          <div class="container">
+                                                                                                                      <center>  <h1> Patient Registration Form</h1> </center>
+
+     <hr>
+
+                                             <label> Firstname </label>
+
+                                                                                     <input type="text" name="first_name" pattern="[a-zA-Z].{1,}" placeholder = "Firstname">
+
+<label> Middlename: </label>
+
+
+              <input type="text" name="middle_name" pattern="[a-zA-Z].{1,}" placeholder="Middlename">
+
+
+                                                      <label> Lastname: </label>
+
+                                                                  <input type="text" name="last_name"  pattern="[a-zA-Z].{1,}"   placeholder="Lastname">                                                                                                                                                                                                                                                                            
+  <br><label for="bithdate">Date of Birth:</label><br>
+
+
+
+                                               <input type="date" id="date" name="bdate"><br>
+<div>
+                                                                       <label>
+                                                                               Gender :
+                                                                       </label><br>
+                                                                       <input type="radio" value="Male" name="gender" checked > Male
+                                                                       <input type="radio" value="Female" name="gender"> Female
+                                                                       <input type="radio" value="Other" name="gender"> Other<br>
+
+                                                                       <br> <label>city:
+                                                                                  <input type=text name="city" pattern="[a-zA-Z].{1,}"><br>
+                                                               </div>
+                                                                       <label>
+                                                                               contact no :
+                                                                       </label>
+                                                                     
+                                                                                            <input type="text" name="phone" ><br>
+
+                                                              
+                                                                         
+                                                                                                        
+                                                                                                <div>
+                <label> Medical history</label><br>
+                         <input type="text" name="history" ><br>
+
+                     
+
+                      <label>Password</label>
+                        <input type="password" name="password"><br>
+                         
+
+                          <input type="submit" value="submit">
+                </form>
+        </body>
+</html>

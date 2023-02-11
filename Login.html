@@ -1,0 +1,103 @@
+<html>
+                 
+<head>
+                        <script>
+                                                         function func()
+{
+                var u=document.myForm.username.value;
+                var p=document.myForm.password.value;
+                if(u=="")
+                        {
+                                                alert(" Name can not be blank");
+                                                return false;
+                                        }
+                else if(p.length<6)
+                        {
+                                                alert("Password length can not be less than 6 character");
+                                                return false;
+                                        }
+}
+        </script>
+
+                                 <title> Login Page </title>
+<style>
+Body {
+                  font-family: Calibri;
+                              background-color: pink;
+                                            text-align:center;
+                                                            align:center;
+}
+                        button {
+                                              background-color: blue;
+                                                  width: 100%;
+                                                     color: orange;
+                                                         padding: 15px
+
+margin: 10px 0px;
+
+ rder: none;                                
+  cursor: pointer;
+
+
+           }
+                         form {
+                                                  border: 3px solid ;
+                                                                       }
+                           input[type=text], input[type=password] {
+                                                     width: 100%;
+                                                                               margin: 8px 0;
+                                                                                                                 padding: 12px 20px;
+
+    display: inline-block;
+
+                                                      border: 2px solid green;
+
+                                                                                                                box-sizing: border-box;
+
+
+                       }
+ .cancelbtn {
+                                                           width: auto;
+                                                                                       padding: 10px 18px;
+                                                                                                                           margin: 10px 5px;
+
+            }
+
+
+                                    .container {
+                                                                 padding: 25px;
+                                                                                              background-color: lightblue;
+                                                                                                                               }
+</style>
+         </head>
+                  <body>
+                                               <center> <h1> WELCOME TO HEALTHY LIFESTYLE SYSTEM </h1> </center>
+                                                                          <form name="myForm" action="login.php" method="get" onsubmit="func()">
+                                                                                  <label>Username : </label>
+                                                                                                                 <input type="text" placeholder="Enter Username" name="username"pattern="[a-zA-Z].{1,}">
+
+ <label>Password : </label>
+
+                                       <input type="password" placeholder="Enter Password" name="password">
+
+                                                                             <center><input type ="submit" name="log" id="log"value="Log In Here"></center>
+                                                                                                                                                                                                                                                               <br>
+
+
+<b> If you are new patient <b style="color:red"><a href="Registration.html">Register here</a></b><br>
+
+
+                                                                           </div>
+
+
+
+                                      </form>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </div>
+
+
+
+
+
+          </body>
+
+</html>
